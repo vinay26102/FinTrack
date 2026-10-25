@@ -1,0 +1,1836 @@
+/* =========================
+   FINTRACK RESPONSIVE STYLES
+========================= */
+
+
+/* =========================
+   LARGE TABLETS / SMALL LAPTOPS
+========================= */
+
+@media (max-width: 1200px) {
+
+  .login-card {
+    max-width: 420px;
+  }
+
+  .login-page {
+    padding: 20px;
+  }
+
+  .dashboard-sidebar {
+    width: 220px;
+  }
+
+  .dashboard-main {
+    width: calc(100% - 220px);
+    margin-left: 220px;
+  }
+
+  .dashboard-content {
+    padding: 26px;
+  }
+
+  .dashboard-topbar {
+    padding: 0 26px;
+  }
+
+  .dashboard-search {
+    width: 300px;
+  }
+
+  .dashboard-analytics {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: 1.4fr 1fr;
+  }
+
+  .transaction-row {
+    grid-template-columns: 25px 1.4fr 90px 120px 80px;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .dashboard-sidebar {
+    width: 200px;
+    padding: 24px 12px;
+  }
+
+  .dashboard-main {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+  }
+
+  .dashboard-content {
+    padding: 22px;
+  }
+
+  .dashboard-topbar {
+    padding: 0 22px;
+  }
+
+  .dashboard-search {
+    width: 240px;
+  }
+
+  .summary-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-card:last-child {
+    grid-column: span 2;
+  }
+
+  .dashboard-analytics {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-row {
+    grid-template-columns: 25px 1.5fr 90px 110px 80px;
+  }
+
+  .categories-content {
+    justify-content: center;
+  }
+
+  .transactions-page {
+    padding: 24px;
+  }
+
+  .transactions-summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .transactions-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .transactions-search {
+    width: 100%;
+  }
+
+  .transactions-filters {
+    width: 100%;
+  }
+}
+
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  /* LOGIN */
+
+  .login-page {
+    min-height: 100dvh;
+    padding: 20px;
+  }
+
+  .login-card {
+    max-width: 410px;
+    padding: 36px 32px;
+  }
+
+  .login-header {
+    margin-bottom: 28px;
+  }
+
+  .brand-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .login-header h1 {
+    font-size: 30px;
+  }
+
+  .login-header p {
+    font-size: 14px;
+  }
+
+
+  /* DASHBOARD */
+
+  .dashboard-sidebar {
+    width: 72px;
+    padding: 24px 10px;
+  }
+
+  .dashboard-main {
+    width: calc(100% - 72px);
+    margin-left: 72px;
+  }
+
+  .sidebar-logo {
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .sidebar-logo .brand-fin,
+  .sidebar-logo .brand-track {
+    display: block;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .sidebar-link span {
+    display: none;
+  }
+
+  .sidebar-link svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .dashboard-topbar {
+    height: 68px;
+    padding: 0 18px;
+  }
+
+  .dashboard-search {
+    width: 210px;
+  }
+
+  .profile-details,
+  .profile-arrow {
+    display: none;
+  }
+
+  .dashboard-profile {
+    gap: 10px;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .dashboard-welcome {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 23px;
+  }
+
+  .summary-cards {
+    gap: 14px;
+  }
+
+  .summary-card {
+    padding: 18px;
+  }
+
+  .summary-card h2 {
+    font-size: 19px;
+  }
+
+  .spending-card,
+  .categories-card,
+  .transactions-card,
+  .quick-actions-card {
+    padding: 18px;
+  }
+
+  .transaction-row {
+    grid-template-columns: 25px 1fr 80px;
+  }
+
+  .transaction-row > span:nth-child(4),
+  .transaction-row > strong {
+    display: none;
+  }
+
+  .transaction-row.table-heading span:nth-child(4),
+  .transaction-row.table-heading span:nth-child(5) {
+    display: none;
+  }
+
+
+  /* TRANSACTIONS */
+
+  .transactions-page {
+    padding: 20px;
+  }
+
+  .transactions-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .transactions-add-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .transactions-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .transactions-toolbar {
+    padding: 16px;
+  }
+
+  .transactions-filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .transaction-filter-button {
+    justify-content: center;
+  }
+
+  .transactions-filters select {
+    width: 100%;
+  }
+
+  .transactions-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  /* =========================
+     LOGIN
+  ========================= */
+
+  .login-page {
+    min-height: 100dvh;
+    padding: 16px;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 24px;
+    border-radius: 18px;
+  }
+
+  .login-header {
+    margin-bottom: 26px;
+  }
+
+  .brand-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 12px;
+  }
+
+  .login-header h1 {
+    font-size: 28px;
+    letter-spacing: -0.4px;
+  }
+
+  .login-header p {
+    font-size: 13px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .input-wrapper input {
+    padding: 12px 40px;
+    font-size: 13px;
+  }
+
+  .input-icon {
+    left: 13px;
+    width: 17px;
+    height: 17px;
+  }
+
+  .password-toggle {
+    right: 9px;
+  }
+
+  .login-options {
+    margin-bottom: 22px;
+  }
+
+  .remember-me,
+  .forgot-password {
+    font-size: 12px;
+  }
+
+  .login-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .register-text {
+    margin-top: 22px;
+    font-size: 13px;
+  }
+
+
+  /* =========================
+     REGISTRATION
+  ========================= */
+
+  .register-page .login-card {
+    max-width: 100%;
+    padding: 28px 22px;
+  }
+
+  .register-page .login-header {
+    margin-bottom: 24px;
+  }
+
+  .register-page .form-group {
+    margin-bottom: 16px;
+  }
+
+
+  /* =========================
+     SNACKBAR
+  ========================= */
+
+  .success-snackbar {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+
+    min-width: 0;
+    width: auto;
+    max-width: none;
+  }
+
+
+  /* =========================
+     DASHBOARD
+  ========================= */
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .dashboard-page {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    display: block !important;
+
+    overflow-x: hidden !important;
+  }
+
+
+  /* =========================
+     BOTTOM MOBILE NAVIGATION
+  ========================= */
+
+  .dashboard-sidebar {
+    position: fixed !important;
+
+    top: auto !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 64px !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+    align-items: center !important;
+
+    padding: 8px 10px !important;
+
+    margin: 0 !important;
+
+    z-index: 999 !important;
+
+    border-top: 1px solid #1f2937;
+  }
+
+  .sidebar-logo,
+  .sidebar-bottom {
+    display: none !important;
+  }
+
+  .sidebar-nav {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    justify-content: space-around !important;
+    align-items: center !important;
+
+    gap: 4px !important;
+  }
+
+  .sidebar-link {
+    width: auto !important;
+    min-width: 0 !important;
+
+    flex: 1 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 9px 6px !important;
+
+    border-radius: 8px !important;
+  }
+
+  .sidebar-link span {
+    display: none !important;
+  }
+
+  .sidebar-link svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .sidebar-link.active {
+    background: rgba(22, 163, 74, 0.15);
+  }
+
+
+  /* =========================
+     MAIN
+  ========================= */
+
+  .dashboard-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 0 76px !important;
+
+    overflow-x: hidden !important;
+  }
+
+
+  /* =========================
+     TOP BAR
+  ========================= */
+
+  .dashboard-topbar {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: 64px !important;
+
+    padding: 14px 16px !important;
+  }
+
+  .dashboard-search {
+    width: 100% !important;
+    max-width: none !important;
+
+    flex: 1;
+  }
+
+  .dashboard-search input {
+    font-size: 12px;
+  }
+
+  .dashboard-profile {
+    display: none !important;
+  }
+
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .dashboard-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 20px 16px !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* =========================
+     WELCOME
+  ========================= */
+
+  .dashboard-welcome {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    flex-direction: column;
+
+    margin-bottom: 22px;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 22px !important;
+  }
+
+  .dashboard-welcome p {
+    font-size: 12px;
+  }
+
+  .add-transaction-button {
+    width: 100% !important;
+  }
+
+
+  /* =========================
+     SUMMARY CARDS
+  ========================= */
+
+  .summary-cards {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 12px !important;
+  }
+
+  .summary-card {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    box-sizing: border-box !important;
+
+    padding: 17px;
+  }
+
+  .summary-card:last-child {
+    grid-column: auto;
+  }
+
+  .summary-card h2 {
+    font-size: 20px;
+  }
+
+
+  /* =========================
+     ANALYTICS
+  ========================= */
+
+  .dashboard-analytics {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 16px !important;
+  }
+
+  .dashboard-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .spending-card,
+  .categories-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto;
+  }
+
+  .card-header {
+    gap: 12px;
+  }
+
+  .card-header h3 {
+    font-size: 14px;
+  }
+
+  .card-header p {
+    font-size: 10px;
+  }
+
+  .card-header select {
+    max-width: 100px;
+  }
+
+  .spending-total {
+    flex-wrap: wrap;
+  }
+
+  .spending-total strong {
+    width: 100%;
+  }
+
+
+  /* =========================
+     CATEGORIES
+  ========================= */
+
+  .categories-content {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    flex-direction: column !important;
+
+    gap: 22px;
+  }
+
+  .category-list {
+    width: 100% !important;
+  }
+
+
+  /* =========================
+     BOTTOM SECTION
+  ========================= */
+
+  .dashboard-bottom {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 16px !important;
+  }
+
+  .transactions-card,
+  .quick-actions-card {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 17px;
+  }
+
+
+  /* =========================
+     TRANSACTION TABLE
+  ========================= */
+
+  .transactions-table {
+    width: 100% !important;
+
+    overflow-x: auto !important;
+  }
+
+  .transaction-row {
+    min-width: 420px;
+  }
+
+
+  /* =========================
+     QUICK ACTIONS
+  ========================= */
+
+  .quick-actions-card {
+    width: 100% !important;
+  }
+
+  .quick-add-box {
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .quick-add-button {
+    width: 100% !important;
+  }
+
+  .quick-action-grid {
+    width: 100% !important;
+
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+
+  /* =========================
+     TRANSACTIONS PAGE
+  ========================= */
+
+  .transactions-page {
+    padding: 16px;
+    padding-bottom: 85px;
+  }
+
+  .transactions-header {
+    margin-bottom: 20px;
+  }
+
+  .transactions-header h1 {
+    font-size: 23px;
+  }
+
+  .transactions-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .transactions-summary {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .transaction-summary-card {
+    padding: 15px;
+  }
+
+  .transaction-summary-card strong {
+    font-size: 18px;
+  }
+
+  .transactions-toolbar {
+    gap: 12px;
+  }
+
+  .transactions-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .transactions-table {
+    min-width: 680px;
+  }
+
+  .transactions-table th,
+  .transactions-table td {
+    padding: 13px 14px;
+  }
+
+  .transactions-footer {
+    padding: 14px 16px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+  .login-page {
+    padding: 12px;
+  }
+
+  .login-card {
+    padding: 26px 18px;
+    border-radius: 16px;
+  }
+
+  .brand-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .login-header h1 {
+    font-size: 26px;
+  }
+
+  .login-header p {
+    font-size: 12px;
+  }
+
+  .login-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .forgot-password {
+    align-self: flex-end;
+  }
+
+  .register-page .login-card {
+    padding: 24px 18px;
+  }
+
+
+  /* DASHBOARD */
+
+  .dashboard-topbar {
+    padding: 0 10px;
+  }
+
+  .dashboard-content {
+    padding: 16px 10px !important;
+  }
+
+  .dashboard-search {
+    padding: 8px 10px;
+  }
+
+  .dashboard-search input {
+    font-size: 11px;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 19px;
+  }
+
+  .summary-card {
+    padding: 15px;
+  }
+
+  .summary-card h2 {
+    font-size: 18px;
+  }
+
+  .quick-action-grid button {
+    min-height: 68px;
+  }
+
+  .dashboard-sidebar {
+    height: 64px !important;
+    padding: 8px 6px !important;
+  }
+
+  .sidebar-link {
+    padding: 9px 4px !important;
+  }
+}
+
+
+/* =========================
+   VERY SMALL DEVICES
+========================= */
+
+@media (max-width: 320px) {
+
+  .login-card {
+    padding: 24px 15px;
+  }
+
+  .login-header h1 {
+    font-size: 24px;
+  }
+
+  .login-header p {
+    font-size: 11px;
+  }
+
+  .input-wrapper input {
+    font-size: 12px;
+  }
+
+  .remember-me,
+  .forgot-password {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================
+   LANDSCAPE MOBILE
+========================= */
+
+@media (max-width: 768px) and (orientation: landscape) {
+
+  .dashboard-sidebar {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: 0 !important;
+
+    width: 72px !important;
+    height: 100vh !important;
+
+    flex-direction: column !important;
+  }
+
+  .dashboard-main {
+    width: calc(100% - 72px) !important;
+    margin-left: 72px !important;
+
+    padding-bottom: 0 !important;
+  }
+
+  .sidebar-logo {
+    display: block !important;
+  }
+
+  .sidebar-bottom {
+    display: flex !important;
+  }
+
+  .sidebar-nav {
+    flex-direction: column !important;
+  }
+
+  .sidebar-link span {
+    display: none !important;
+  }
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .input-wrapper,
+  .login-button,
+  .password-toggle,
+  .forgot-password,
+  .register-link {
+    transition: none;
+  }
+
+  .login-button:hover {
+    transform: none;
+  }
+}
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .add-transaction-page {
+    width: 100%;
+    min-width: 0;
+    padding: 20px 16px 90px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .add-transaction-header {
+    margin-bottom: 20px;
+  }
+
+  .back-button {
+    margin-bottom: 14px;
+  }
+
+  .add-transaction-header h1 {
+    font-size: 23px;
+  }
+
+  .add-transaction-header p {
+    font-size: 13px;
+  }
+
+  .add-transaction-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .transaction-type-buttons {
+    gap: 8px;
+  }
+
+  .type-button {
+    height: 44px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .input-with-icon input,
+  .input-with-icon select {
+    height: 44px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .cancel-button,
+  .save-transaction-button {
+    width: 100%;
+  }
+}
+/* =========================
+   ANALYTICS RESPONSIVE
+========================= */
+
+@media screen and (max-width: 1100px) {
+
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  .analytics-page {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .analytics-summary {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .analytics-summary-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .analytics-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .analytics-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .analytics-chart {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .analytics-pie-wrapper {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+  .analytics-page {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 14px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+
+  /* HEADER */
+
+  .analytics-header {
+    margin-bottom: 18px;
+  }
+
+  .analytics-header h1 {
+    font-size: 22px;
+  }
+
+  .analytics-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+
+  /* SUMMARY CARDS */
+
+  .analytics-summary {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .analytics-summary-card {
+    display: flex;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 82px;
+    padding: 14px;
+    box-sizing: border-box;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .analytics-summary-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 9px;
+  }
+
+  .analytics-summary-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .analytics-summary-card span {
+    font-size: 12px;
+  }
+
+  .analytics-summary-card strong {
+    font-size: 18px;
+  }
+
+
+  /* CHARTS */
+
+  .analytics-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .analytics-grid > .analytics-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    flex: none !important;
+  }
+
+
+  /* CARD HEADER */
+
+  .analytics-card-header {
+    min-height: 64px;
+    padding: 14px;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  .analytics-card-header h2 {
+    font-size: 14px;
+  }
+
+  .analytics-card-header p {
+    font-size: 11px;
+  }
+
+  .analytics-card-header select {
+    height: 32px;
+    max-width: 120px;
+    padding: 0 7px;
+    font-size: 11px;
+  }
+
+
+  /* BAR CHART */
+
+  .analytics-chart {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 270px;
+    padding: 10px 4px 14px;
+    box-sizing: border-box;
+  }
+
+
+  /* PIE CHART */
+
+  .analytics-pie-wrapper {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 270px;
+    padding: 8px 14px 16px;
+    box-sizing: border-box;
+  }
+
+  .analytics-pie-chart {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+
+  /* CATEGORY LIST */
+
+  .analytics-category-list {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .analytics-category-item {
+    width: 100%;
+    min-width: 0;
+    padding: 6px 0;
+  }
+
+  .analytics-category-name {
+    min-width: 0;
+  }
+
+  .analytics-category-name > span:last-child {
+    font-size: 11px;
+  }
+
+  .analytics-category-item strong {
+    font-size: 11px;
+  }
+
+
+  /* INSIGHTS */
+
+  .analytics-insights {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .analytics-insight-list {
+    padding: 2px 14px 14px;
+  }
+
+  .analytics-insight-item {
+    gap: 10px;
+    padding: 13px 0;
+  }
+
+  .analytics-insight-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    font-size: 10px;
+  }
+
+  .analytics-insight-item strong {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .analytics-insight-item span {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+}
+/* ================================
+   CATEGORIES MOBILE FIX
+================================ */
+
+@media (max-width: 768px) {
+
+  .categories-page {
+    width: 100% !important;
+    padding: 24px 20px 110px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden;
+  }
+
+  /* SUMMARY */
+
+  .categories-summary {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .categories-summary-card {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* SECTIONS */
+
+  .categories-section {
+    width: 100% !important;
+  }
+
+  .categories-section-header {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* CATEGORY GRID */
+
+  .categories-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+
+  /* CATEGORY CARD */
+
+  .category-card {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .category-card-content {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+
+  /* EMPTY STATE */
+
+  .categories-empty {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .categories-page {
+    padding: 20px 14px 110px !important;
+  }
+
+  .categories-header {
+    width: 100%;
+  }
+
+  .categories-header h1 {
+    font-size: 22px;
+  }
+
+  .categories-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .categories-summary {
+    width: 100% !important;
+  }
+
+  .categories-summary-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .categories-section-header {
+    align-items: flex-start !important;
+  }
+
+  .category-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 15px !important;
+  }
+
+}
+/* ================================
+   SETTINGS RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .settings-page {
+    width: 100%;
+    padding: 24px 20px 110px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .settings-header {
+    margin-bottom: 22px;
+  }
+
+  .settings-header h1 {
+    font-size: 24px;
+  }
+
+  .settings-header p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .settings-section {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .settings-card {
+    width: 100%;
+  }
+
+  .settings-item {
+    min-height: 72px;
+    padding: 14px 15px;
+    gap: 12px;
+  }
+
+  .settings-item-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .settings-item-content {
+    min-width: 0;
+  }
+
+  .settings-item-content strong {
+    font-size: 14px;
+  }
+
+  .settings-item-content span {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .settings-page {
+    padding: 20px 14px 110px;
+  }
+
+  .settings-header h1 {
+    font-size: 22px;
+  }
+
+  .settings-header p {
+    font-size: 12px;
+  }
+
+  .settings-section-header h2 {
+    font-size: 17px;
+  }
+
+  .settings-section-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .settings-item {
+    padding: 13px;
+    gap: 11px;
+  }
+
+  .settings-item-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+  }
+
+  .settings-item-content span {
+    font-size: 10px;
+  }
+
+  .settings-arrow {
+    font-size: 15px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .settings-profile-form {
+    padding: 16px;
+  }
+
+  .settings-save-button {
+    width: 100%;
+  }
+
+}
+@media (max-width: 480px) {
+
+  .settings-toggle {
+    width: 40px;
+    height: 23px;
+  }
+
+  .settings-toggle-circle {
+    width: 17px;
+    height: 17px;
+  }
+
+  .settings-toggle.active
+  .settings-toggle-circle {
+    transform: translateX(17px);
+  }
+
+}
+/* =========================
+   DASHBOARD SPENDING CHART
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .chart-placeholder {
+    height: 220px;
+    margin-top: 16px;
+  }
+
+  .chart-placeholder
+  .recharts-cartesian-axis-tick-value {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-placeholder {
+    height: 200px;
+    margin-top: 14px;
+  }
+
+  .chart-placeholder
+  .recharts-cartesian-axis-tick-value {
+    font-size: 9px;
+  }
+
+  .chart-placeholder
+  .recharts-cartesian-axis-tick:first-child {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+
+  .categories-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .donut-placeholder {
+    width: 180px;
+    height: 180px;
+  }
+
+  .donut-center strong {
+    font-size: 17px;
+  }
+
+  .category-list {
+    width: 100%;
+  }
+
+  .category-item {
+    width: 100%;
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .categories-content {
+    gap: 16px;
+  }
+
+  .donut-placeholder {
+    width: 165px;
+    height: 165px;
+  }
+
+  .donut-center strong {
+    font-size: 15px;
+    max-width: 105px;
+  }
+
+  .donut-center span {
+    font-size: 10px;
+  }
+
+  .category-item {
+    gap: 6px;
+  }
+
+}
+/* =========================
+   CUSTOM DATE PICKER
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .custom-calendar {
+    width: 300px;
+    max-width: calc(100vw - 40px);
+    padding: 15px;
+  }
+
+  .calendar-day {
+    height: 33px;
+    font-size: 12px;
+  }
+
+  .calendar-nav-button {
+    width: 31px;
+    height: 31px;
+  }
+
+  .calendar-month-year strong {
+    font-size: 14px;
+  }
+
+  .calendar-month-year span {
+    font-size: 10px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .custom-calendar {
+    width: 100%;
+    max-width: none;
+    padding: 14px;
+  }
+
+  .calendar-header {
+    margin-bottom: 15px;
+  }
+
+  .calendar-weekdays span {
+    height: 28px;
+    font-size: 9px;
+  }
+
+  .calendar-days {
+    gap: 3px;
+  }
+
+  .calendar-day {
+    height: 32px;
+    font-size: 11px;
+    border-radius: 7px;
+  }
+
+  .calendar-nav-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .calendar-month-year strong {
+    font-size: 14px;
+  }
+
+  .calendar-today-button {
+    padding: 6px 13px;
+    font-size: 10px;
+  }
+
+}
+/* =========================
+   TOAST NOTIFICATION
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .toast {
+    left: 20px;
+    right: 20px;
+    top: 20px;
+bottom: auto;
+
+    width: auto;
+    min-width: 0;
+    max-width: none;
+
+    min-height: 54px;
+
+    padding: 9px 11px;
+
+    border-radius: 11px;
+  }
+
+  .toast-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+  }
+
+  .toast-message {
+    font-size: 12px;
+  }
+
+  .toast-close {
+    width: 27px;
+    height: 27px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .toast {
+    left: 14px;
+    top: 14px;
+bottom: auto;
+    min-height: 52px;
+
+    padding: 8px 10px;
+  }
+
+  .toast-icon {
+    width: 32px;
+    height: 32px;
+
+    font-size: 16px;
+  }
+
+  .toast-message {
+    font-size: 11px;
+  }
+
+}

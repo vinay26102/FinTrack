@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 import {
@@ -15,6 +15,9 @@ import fintrackBackground from '../../assets/fintrack-background.png'
 import { useToast } from '../../components/ToastContext'
 
 function Login() {
+  useEffect(() => {
+  document.title = 'FinTrack | Login'
+}, [])
   const navigate = useNavigate()
 
   const { showToast } = useToast()

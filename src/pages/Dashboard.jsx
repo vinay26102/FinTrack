@@ -3,7 +3,6 @@ import {
   useMemo,
   useState,
 } from 'react'
-
 import {
   FiCreditCard,
   FiPlusCircle,
@@ -39,6 +38,9 @@ import {
 import { useNavigate } from 'react-router-dom'
 
 function Dashboard() {
+  useEffect(() => {
+  document.title = 'FinTrack | Dashboard'
+}, [])
   const navigate = useNavigate()
 
   const [successMessage, setSuccessMessage] =

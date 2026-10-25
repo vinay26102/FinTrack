@@ -25,6 +25,9 @@ import {
 } from 'recharts'
 
 function Analytics() {
+  useEffect(() => {
+  document.title = 'FinTrack | Analytics'
+}, [])
   const [transactions, setTransactions] =
     useState([])
 

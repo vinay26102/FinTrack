@@ -24,6 +24,9 @@ import {
 } from 'react-router-dom'
 
 function AddTransaction() {
+  useEffect(() => {
+  document.title = 'FinTrack | Add Transaction'
+}, [])
   const navigate = useNavigate()
   const location = useLocation()
 

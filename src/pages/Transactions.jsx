@@ -22,10 +22,12 @@ import {
   FiTrash2,
   FiEdit2,
 } from 'react-icons/fi'
-
 import { useNavigate } from 'react-router-dom'
 
 function Transactions() {
+  useEffect(() => {
+  document.title = 'FinTrack | Transactions'
+}, [])
   const navigate = useNavigate()
   const { showToast } = useToast()
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   FiUser,
   FiMail,
@@ -18,6 +18,9 @@ import fintrackBackground from '../../assets/fintrack-background.png'
 import { useToast } from '../../components/ToastContext'
 
 function Register() {
+  useEffect(() => {
+  document.title = 'FinTrack | Register'
+}, [])
   const navigate = useNavigate()
   const { showToast } = useToast()
 

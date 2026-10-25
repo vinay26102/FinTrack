@@ -14,6 +14,9 @@ import {
 } from 'react-icons/fi'
 
 function Settings() {
+  useEffect(() => {
+  document.title = 'FinTrack | Settings'
+}, [])
   const [showProfile, setShowProfile] =
     useState(false)
 const { showToast } = useToast()

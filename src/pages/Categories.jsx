@@ -19,6 +19,9 @@ import {
 } from 'react-icons/fi'
 
 function Categories() {
+  useEffect(() => {
+  document.title = 'FinTrack | Categories'
+}, [])
   const [transactions, setTransactions] =
     useState([])
 

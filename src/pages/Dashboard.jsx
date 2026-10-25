@@ -38,6 +38,15 @@ import {
 import { useNavigate } from 'react-router-dom'
 
 function Dashboard() {
+  const currentHour = new Date().getHours()
+
+let greeting = 'Good Evening'
+
+if (currentHour < 12) {
+  greeting = 'Good Morning'
+} else if (currentHour < 17) {
+  greeting = 'Good Afternoon'
+}
   useEffect(() => {
   document.title = 'FinTrack | Dashboard'
 }, [])
@@ -609,7 +618,7 @@ function Dashboard() {
           <div>
 
             <h1>
-              Good morning, {userName} 👋
+               {greeting} , {userName} 👋
             </h1>
 
             <p>

@@ -12,7 +12,10 @@ import {
   FiTag,
   FiSettings,
   FiLogOut,
+  FiMoreHorizontal,
 } from 'react-icons/fi'
+
+import { useState } from 'react'
 
 import { useToast } from '../components/ToastContext'
 
@@ -20,12 +23,17 @@ function DashboardLayout() {
   const navigate = useNavigate()
   const location = useLocation()
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] =
+    useState(false)
+
   const { showToast } = useToast()
 
   const handleLogout = () => {
     localStorage.removeItem(
       'fintrackLoggedIn'
     )
+
+    setIsMobileMenuOpen(false)
 
     showToast(
       'Logged out successfully!',
@@ -37,6 +45,8 @@ function DashboardLayout() {
 
   return (
     <div className="dashboard-page">
+
+      {/* DESKTOP SIDEBAR */}
 
       <aside className="dashboard-sidebar">
 
@@ -73,7 +83,6 @@ function DashboardLayout() {
             <span>
               Dashboard
             </span>
-
           </button>
 
 
@@ -96,7 +105,6 @@ function DashboardLayout() {
             <span>
               Transactions
             </span>
-
           </button>
 
 
@@ -121,7 +129,6 @@ function DashboardLayout() {
             <span>
               Add Transaction
             </span>
-
           </button>
 
 
@@ -144,7 +151,6 @@ function DashboardLayout() {
             <span>
               Analytics
             </span>
-
           </button>
 
 
@@ -167,13 +173,12 @@ function DashboardLayout() {
             <span>
               Categories
             </span>
-
           </button>
 
         </nav>
 
 
-        {/* BOTTOM */}
+        {/* DESKTOP BOTTOM */}
 
         <div className="sidebar-bottom">
 
@@ -196,7 +201,6 @@ function DashboardLayout() {
             <span>
               Settings
             </span>
-
           </button>
 
 
@@ -212,7 +216,6 @@ function DashboardLayout() {
             <span>
               Logout
             </span>
-
           </button>
 
         </div>
@@ -220,11 +223,209 @@ function DashboardLayout() {
       </aside>
 
 
+      {/* MAIN CONTENT */}
+
       <main className="dashboard-main">
 
         <Outlet />
 
       </main>
+
+
+      {/* MOBILE BOTTOM NAVIGATION */}
+
+      <nav className="mobile-bottom-nav">
+
+        {/* HOME */}
+
+        <button
+          type="button"
+          className={
+            location.pathname ===
+            '/dashboard'
+              ? 'active'
+              : ''
+          }
+          onClick={() => {
+            setIsMobileMenuOpen(false)
+            navigate('/dashboard')
+          }}
+        >
+          <FiHome />
+
+          <span>
+            Home
+          </span>
+        </button>
+
+
+        {/* TRANSACTIONS */}
+
+        <button
+          type="button"
+          className={
+            location.pathname ===
+            '/transactions'
+              ? 'active'
+              : ''
+          }
+          onClick={() => {
+            setIsMobileMenuOpen(false)
+            navigate('/transactions')
+          }}
+        >
+          <FiCreditCard />
+
+          <span>
+            Transactions
+          </span>
+        </button>
+
+
+        {/* ADD */}
+
+        <button
+          type="button"
+          className={
+            location.pathname ===
+            '/add-transaction'
+              ? 'active'
+              : ''
+          }
+          onClick={() => {
+            setIsMobileMenuOpen(false)
+            navigate(
+              '/add-transaction'
+            )
+          }}
+        >
+          <FiPlusCircle />
+
+          <span>
+            Add
+          </span>
+        </button>
+
+
+        {/* ANALYTICS */}
+
+        <button
+          type="button"
+          className={
+            location.pathname ===
+            '/analytics'
+              ? 'active'
+              : ''
+          }
+          onClick={() => {
+            setIsMobileMenuOpen(false)
+            navigate('/analytics')
+          }}
+        >
+          <FiBarChart2 />
+
+          <span>
+            Analytics
+          </span>
+        </button>
+
+
+        {/* CATEGORIES */}
+
+        <button
+          type="button"
+          className={
+            location.pathname ===
+            '/categories'
+              ? 'active'
+              : ''
+          }
+          onClick={() => {
+            setIsMobileMenuOpen(false)
+            navigate('/categories')
+          }}
+        >
+          <FiTag />
+
+          <span>
+            Categories
+          </span>
+        </button>
+
+
+        {/* MORE */}
+
+        <button
+          type="button"
+          className={
+            `mobile-more-button ${
+              isMobileMenuOpen ||
+              location.pathname ===
+              '/settings'
+                ? 'active'
+                : ''
+            }`
+          }
+          onClick={() =>
+            setIsMobileMenuOpen(
+              !isMobileMenuOpen
+            )
+          }
+        >
+          <FiMoreHorizontal />
+
+          <span>
+            More
+          </span>
+        </button>
+
+
+        {/* MORE MENU */}
+
+        {isMobileMenuOpen && (
+          <div className="mobile-more-menu">
+
+            {/* SETTINGS */}
+
+            <button
+              type="button"
+              className={
+                location.pathname ===
+                '/settings'
+                  ? 'active'
+                  : ''
+              }
+              onClick={() => {
+                setIsMobileMenuOpen(false)
+                navigate('/settings')
+              }}
+            >
+              <FiSettings />
+
+              <span>
+                Settings
+              </span>
+            </button>
+
+
+            {/* LOGOUT */}
+
+            <button
+              type="button"
+              className="mobile-more-logout"
+              onClick={handleLogout}
+            >
+              <FiLogOut />
+
+              <span>
+                Logout
+              </span>
+            </button>
+
+          </div>
+        )}
+
+      </nav>
 
     </div>
   )
